@@ -25,7 +25,7 @@ class CascadeConfig
             $realpath = $path;
         }
 
-        if (array_search($realpath, static::$paths))
+        if (!array_search($realpath, static::$paths))
         {
             static::$paths[] = $realpath;
         }
