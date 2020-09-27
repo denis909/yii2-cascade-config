@@ -68,7 +68,7 @@ class CascadeConfig
         }
     }
 
-    public static function mergeArray(string $file, array $return = [])
+    public static function loadArray(string $file, array $return = [])
     {
         $files = static::findFiles($file);
 
@@ -80,7 +80,7 @@ class CascadeConfig
         return $return;
     }
 
-    public static function mergeContent(string $file, string $devider = "\n")
+    public static function loadString(string $file, string $devider = "\n")
     {
         $return = '';
 
